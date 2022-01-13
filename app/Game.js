@@ -203,6 +203,7 @@ class Game {
   winning() {
     document.getElementsByClassName("step")[this.currentStep].style.display="none";
     document.querySelector(".win").style.display="block";
+    document.querySelector(".win").style.borderRadius=25+"%";
     this.wordWrapper;
     document.querySelector(".losuj").style.display="block";
     this.biographyWrapper;
