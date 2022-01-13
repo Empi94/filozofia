@@ -104,6 +104,20 @@ h1 {
     margin: 0 auto;
 }
 
+#output .step p {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    max-width: 550px;
+    line-height: 30px;
+    text-align: center;
+    padding: 30px 10px;
+    text-transform: uppercase;
+}
+
+#output .step p span {
+    font-size: 26px;
+}
 
 #category,
 #biography {
