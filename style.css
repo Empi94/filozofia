@@ -108,6 +108,10 @@ h1 {
     margin: 0 auto;
 }
 
+#output .step img {
+    border-radius: 10%;
+}
+
 #output .step p {
     display: block;
     font-size: 20px;
