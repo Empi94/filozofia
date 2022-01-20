@@ -174,18 +174,20 @@ class Game {
 
   ];
 
-  constructor({ lettersWrapper, categoryWrapper, wordWrapper, outputWrapper,biographyWrapper }) {
+  constructor({ lettersWrapper, categoryWrapper, wordWrapper, outputWrapper,biographyWrapper,textInfo }) {
     this.lettersWrapper = lettersWrapper;
     this.categoryWrapper = categoryWrapper;
     this.wordWrapper = wordWrapper;
     this.outputWrapper = outputWrapper;
     this.biographyWrapper=biographyWrapper;
+    this.textInfo=textInfo;
 
     const { text, category,biography } = this.quotes[
       Math.floor(Math.random() * this.quotes.length)
     ];
     this.categoryWrapper.innerHTML = category;
     this.biographyWrapper.innerHTML=biography;
+    this.textInfo=text;
     this.quote = new Quote(text);
   }
 
@@ -229,9 +231,12 @@ class Game {
   }
 
   winning() {
+    this.categoryWrapper;
+    document.getElementById("category").style.display="none";
+    document.getElementById("word").style.marginTop=0+"px";
     document.getElementsByClassName("step")[this.currentStep].style.display="none";
     document.querySelector(".win").style.display="block";
-    document.querySelector(".win").style.borderRadius=10+"%";
+    document.querySelector(".win img").style.borderRadius=10+"%";
     this.wordWrapper;
     document.querySelector(".losuj").style.display="block";
     this.biographyWrapper;
@@ -248,9 +253,12 @@ class Game {
 
   loosing() {
     this.wordWrapper;
-    document.getElementById("word").innerHTML=",,Jedynym dobrem jest wiedza, a jedynym złem jest ignorancja”";
+    this.categoryWrapper;
+    document.getElementById("category").innerHTML="";
+    document.getElementById("word").innerHTML="Niestety przegrales<br>Prawidlowa odpowiedz to "+this.textInfo+"<br>,,Jedynym dobrem jest wiedza, a jedynym złem jest ignorancja”";
     document.getElementById("word").style.fontSize=28+"px";
     document.getElementById("word").style.fontWeight=700;
+    document.getElementById("word").style.lineHeight=60+"px";
     document.getElementById("word").style.backgroundColor="red";
     document.getElementById("word").style.border=2+"px";
     document.getElementById("word").style.borderStyle="solid";
