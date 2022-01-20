@@ -20,7 +20,6 @@ body {
     background-image: url("images/background.png");
     background-position: center;
     background-size: 85%;
-    overflow: hidden;
 }
 
 #hangman {
@@ -95,7 +94,6 @@ h1 {
 #output {
     margin-top: 50px;
     width: 50%;
-    transition: .4s;
 }
 
 #output .step {
