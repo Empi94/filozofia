@@ -236,7 +236,7 @@ class Game {
     document.getElementById("word").style.marginTop=0+"px";
     document.getElementsByClassName("step")[this.currentStep].style.display="none";
     document.querySelector(".win").style.display="block";
-    document.querySelector(".win img").style.borderRadius=10+"%";
+    // document.querySelector(".win img").style.borderRadius=10+"%";
     this.wordWrapper;
     document.querySelector(".losuj").style.display="block";
     this.biographyWrapper;
@@ -254,6 +254,8 @@ class Game {
   loosing() {
     this.wordWrapper;
     this.categoryWrapper;
+    document.getElementById("category").style.display="none";
+    document.getElementById("word").style.marginTop=0+"px";
     document.getElementById("category").innerHTML="";
     document.getElementById("word").innerHTML="Niestety przegrales<br>Prawidlowa odpowiedz to "+this.textInfo+"<br>,,Jedynym dobrem jest wiedza, a jedynym złem jest ignorancja”";
     document.getElementById("word").style.fontSize=28+"px";
